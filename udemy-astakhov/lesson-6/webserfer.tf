@@ -11,7 +11,7 @@ resource "aws_instance" "terraform_arhel" {
   user_data 			= templatefile("./user-data.sh.tpl", {
 	f_name = "Orkhan",
 	l_name = "Mamedov",
-	names = ["vasya", "kate", "tester"]
+	names = ["vasya", "kate", "tester", "XYZ"]
     })
 
   tags = {
@@ -19,6 +19,6 @@ resource "aws_instance" "terraform_arhel" {
   }
 
   lifecycle {
-    prevent_destroy = true
+    ignore_changes = [ami, user_data]
   }
 }
