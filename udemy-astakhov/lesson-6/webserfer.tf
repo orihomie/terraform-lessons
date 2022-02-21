@@ -25,3 +25,4 @@ resource "aws_instance" "terraform_arhel" {
     create_before_destroy = true
   }
 }
+
