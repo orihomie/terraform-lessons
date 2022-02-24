@@ -1,6 +1,6 @@
 provider "aws" {
 	profile	= "${var.profile}"
-	region 	= "${var.region}"
+	region = "${var.region}"
 }
 
 data "aws_availability_zones" "available" {}
@@ -12,13 +12,6 @@ data "aws_ami" "latest_amazon" {
 		name = "name"
 		values = ["amzn2-ami-kernel-5.10-hvm-*-x86_64-gp2"]
 	}
-}
-
-output "latest_amazon_ami_name" {
-	value = data.aws_ami.latest_amazon.name
-}
-output "latest_amazon_ami_id" {
-	value = data.aws_ami.latest_amazon.id
 }
 
 output "web_loadbalancer_url" {
