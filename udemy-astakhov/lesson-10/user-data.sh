@@ -12,7 +12,7 @@ cat <<EOF > /var/www/html/index.html
 
 <font color="green">Server private IP: <font color="aqua">$myip<br><br>
 <font color="magenta">
-<b>Version 4.0</b>
+<b>Version 4.1</b>
 </body>
 </html>
 EOF
