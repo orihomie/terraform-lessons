@@ -5,6 +5,7 @@ resource "aws_launch_configuration" "web" {
 	security_groups	= [aws_security_group.web.id]
 	user_data 	= file("./user-data.sh")
 	lifecycle {
-		create_before_destroy = true
-	}
+    		create_before_destroy = true
+  	}
 }
+
