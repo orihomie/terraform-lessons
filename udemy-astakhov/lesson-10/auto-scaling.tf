@@ -1,6 +1,6 @@
 
 resource "aws_autoscaling_group" "web" {
-  name                      = "Highly-Available-WebServer-ASG"
+  name_prefix               = "ASG-${aws_launch_configuration.web.name}"
   max_size                  = 2
   min_size                  = 2
   min_elb_capacity	    = 2
