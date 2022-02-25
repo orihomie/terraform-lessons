@@ -16,3 +16,22 @@ variable somemapvar {
 ```
 
 `var.somemapvar.Property`
+
+### Overriding variables by CLI
+
+tf plan -var="instance_type=t3.small" -var="region=eu-central-1"
+
+### Overriding variables by ENV
+
+Terraform checks for environment variables with prefix `TF_VAR_` on executing any command and substitutes them if there's something to substitute.<br>
+
+export TF_VAR_region=us-west-2<br>
+or<br>
+TF_VAR_region=us-west-2 tf plan<br>
+
+
+### Most common option `terraform.tfvars`
+
+A file with needed default values, looks like .env file.<br>
+Could be names as `terraform.tfvars` or `*.auto.tfvars` (`prod.auto.tfvars`). In this case you'll need to<br>
+pass needed file name as `-var-file="prof.auto.tfvars"`.
