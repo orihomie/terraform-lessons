@@ -1,6 +1,7 @@
 In this lesson I've learned how to make a variables of different types.<br>
 There are only 3 types of variables:
 - string
+- number
 - bool
 - map
 
@@ -35,3 +36,12 @@ TF_VAR_region=us-west-2 tf plan<br>
 A file with needed default values, looks like .env file.<br>
 Could be names as `terraform.tfvars` or `*.auto.tfvars` (`prod.auto.tfvars`). In this case you'll need to<br>
 pass needed file name as `-var-file="prof.auto.tfvars"`.
+
+
+## Env priority
+
+- env vars
+- terraform.tfvars file
+- terraform.tfvars.json
+- *.auto.tfvars or *auto.tfvars.json
+- -var or -var-file option
